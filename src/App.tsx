@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import FavoriteJokeBlock from './Copmonents/FavoriteJokeBlock_Component'
+import ButtonBlock from './Copmonents/ButtonBlock_Component'
+import TextContainer from './Copmonents/TextContainer_Component'
+import styled from 'styled-components'
+
+
+const Container = styled.div`
+  position: absolute;
+  min-width:100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 9fr 1fr;
+`
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Container>
+      <FavoriteJokeBlock/>
+      <TextContainer/>
+      <ButtonBlock/>
+    </Container>
+  )
 }
 
 export default App;
